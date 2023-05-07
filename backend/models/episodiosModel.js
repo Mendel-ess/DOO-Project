@@ -1,32 +1,36 @@
 import { sq } from "../server";
 import { DataTypes } from "sequelize";
 
-const users = sq.define("users", {
-  user_id: {
+const episodios = sq.define("episodios", {
+  episodio_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     allowNull: false,
   },
-  username: {
-    type: DataTypes.CHAR,
+  episodio_number: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
-  password: {
-    type: DataTypes.CHAR,
+  episodio_title: {
+    type: DataTypes.TEXT,
     allowNull: false,
   },
-  email: {
-    type: DataTypes.CHAR,
+  fecha_emision: {
+    type: DataTypes.DATEONLY,
+    allowNull: false,
+  },
+  duracion: {
+    type: DataTypes.TIME,
     allowNull: false,
   },
   fecha_creacion: {
     type: DataTypes.DATEONLY,
     allowNull: false,
   },
-  fecha_actualizacion: {
-    type: DataTypes.DATEONLY,
+  movie_title: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
 });
 
-export default users;
+export default episodios;

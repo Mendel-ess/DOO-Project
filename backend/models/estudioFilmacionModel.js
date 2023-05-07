@@ -1,32 +1,27 @@
 import { sq } from "../server";
 import { DataTypes } from "sequelize";
 
-const users = sq.define("users", {
-  user_id: {
+const estudio_filmacion = sq.define("estudio_de_filmacion", {
+  casa_de_filmacion_id: {
     type: DataTypes.INTEGER,
+    allowNull: false,
     primaryKey: true,
+  },
+  nombre_casa: {
+    type: DataTypes.TEXT,
     allowNull: false,
   },
-  username: {
-    type: DataTypes.CHAR,
-    allowNull: false,
-  },
-  password: {
-    type: DataTypes.CHAR,
-    allowNull: false,
-  },
-  email: {
-    type: DataTypes.CHAR,
+  pais: {
+    type: DataTypes.TEXT,
     allowNull: false,
   },
   fecha_creacion: {
     type: DataTypes.DATEONLY,
     allowNull: false,
   },
-  fecha_actualizacion: {
+  fecha_actual: {
     type: DataTypes.DATEONLY,
     allowNull: false,
   },
 });
-
-export default users;
+export default estudio_filmaciones;
