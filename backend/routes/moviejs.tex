@@ -1,0 +1,22 @@
+const { Router } = require('express');
+const axios = require('axios');
+const router = Router();
+
+// Ruta principal
+router.get('/', async (req, res) => {
+  try {
+    const response = await axios.get('https://api.themoviedb.org/3/movie/popular', {
+      params: {
+        api_key: 'b45c71139c410b3bdd8e814b3560a0d0',
+        language: 'es'
+      }
+    });
+    const movieList = response.data.results;
+    res.json(movieList);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Ocurrió un error al obtener la lista de películas populares' });
+  }
+});
+
+module.exports = router;
