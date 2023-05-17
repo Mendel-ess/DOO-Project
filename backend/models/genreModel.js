@@ -12,6 +12,8 @@ const genre = sq.define("movie_genres", {
         allowNull: false
     }
 });
-genre.sync();
+genre.sync().then(() => {
+    console.log("Generos sincronizados")
+});
 
-export default genre;
+module.export = genre;

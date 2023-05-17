@@ -3,14 +3,18 @@ const axios = require('axios');
 const router = Router();
 
 //Process 
-const movieList = [];
+let movieList, movieName, movieRate, movieAdult, movieDate;
 let genreList, genrename;
 
 
 //peliculas
 axios.get('https://api.themoviedb.org/3/movie/popular?api_key=b45c71139c410b3bdd8e814b3560a0d0&language=es')
 .then(response => {
-    movieList.push(response.data);
+    movieList = Object.values(response.data);
+    movieName = movieList[1].map(i => i.title);
+    movieRate = movieList[1].map(i => i.vote_average);
+    movieAdult = movieList[1].map(i => i.adult);
+    movieDate = movieList[1].map(i => i.release_date);
 })
 .catch(err => {
     console.log(err);
@@ -28,7 +32,10 @@ axios.get('https://api.themoviedb.org/3/genre/movie/list?api_key=b45c71139c410b3
 
 //Rutas
 router.get('/', (req, res) => {
-    res.json(movieList);
+    console.log(movieName);
+    console.log(movieRate);
+    console.log(movieAdult);
+    console.log(movieDate);
 });
 
 router.get('/genres', (req, res) => {

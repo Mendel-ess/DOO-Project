@@ -1,0 +1,410 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/aAgGrfBwna1nO4M2USxwFgK5O0t.jpg",
+            "genre_ids": [
+                27,
+                53,
+                14
+            ],
+            "id": 713704,
+            "original_language": "en",
+            "original_title": "Evil Dead Rise",
+            "overview": "",
+            "popularity": 5030.612,
+            "poster_path": "/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+            "release_date": "2023-04-12",
+            "title": "Evil Dead Rise",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 1017
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3CxUndGhUcZdt1Zggjdb2HkLLQX.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 640146,
+            "original_language": "en",
+            "original_title": "Ant-Man and the Wasp: Quantumania",
+            "overview": "",
+            "popularity": 3023.011,
+            "poster_path": "/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+            "release_date": "2023-02-15",
+            "title": "Ant-Man and the Wasp: Quantumania",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 2525
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nLBRD7UPR6GjmWQp6ASAfCTaWKX.jpg",
+            "genre_ids": [
+                16,
+                10751,
+                12,
+                14,
+                35
+            ],
+            "id": 502356,
+            "original_language": "en",
+            "original_title": "The Super Mario Bros. Movie",
+            "overview": "",
+            "popularity": 4675.159,
+            "poster_path": "/neG5yuQITkKI6QcmN3l4JbqinTF.jpg",
+            "release_date": "2023-04-05",
+            "title": "The Super Mario Bros. Movie",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 2202
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hiHGRbyTcbZoLsYYkO4QiCLYe34.jpg",
+            "genre_ids": [
+                27,
+                53,
+                14
+            ],
+            "id": 758323,
+            "original_language": "en",
+            "original_title": "The Pope's Exorcist",
+            "overview": "",
+            "popularity": 2378.68,
+            "poster_path": "/4IjRR2OW2itjQWQnmlUzvwLz9DQ.jpg",
+            "release_date": "2023-04-05",
+            "title": "The Pope's Exorcist",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 971
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/99NBEpQEM4uLItZY2RquqdqdSXM.jpg",
+            "genre_ids": [
+                878,
+                12,
+                28
+            ],
+            "id": 447365,
+            "original_language": "en",
+            "original_title": "Guardians of the Galaxy Vol. 3",
+            "overview": "",
+            "popularity": 2137.214,
+            "poster_path": "/9UQMzjDgkapYMrwmvNNSVpAnjsV.jpg",
+            "release_date": "2023-05-03",
+            "title": "Guardians of the Galaxy Vol. 3",
+            "video": false,
+            "vote_average": 8.2,
+            "vote_count": 1207
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/b9UCfDzwiWw7mIFsIQR9ZJUeh7q.jpg",
+            "genre_ids": [
+                28,
+                35,
+                10749
+            ],
+            "id": 868759,
+            "original_language": "en",
+            "original_title": "Ghosted",
+            "overview": "",
+            "popularity": 1732.717,
+            "poster_path": "/liLN69YgoovHVgmlHJ876PKi5Yi.jpg",
+            "release_date": "2023-04-18",
+            "title": "Ghosted",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 784
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nDxJJyA5giRhXx96q1sWbOUjMBI.jpg",
+            "genre_ids": [
+                28,
+                35,
+                14,
+                12
+            ],
+            "id": 594767,
+            "original_language": "en",
+            "original_title": "Shazam! Fury of the Gods",
+            "overview": "",
+            "popularity": 1632.305,
+            "poster_path": "/A3ZbZsmsvNGdprRi2lKgGEeVLEH.jpg",
+            "release_date": "2023-03-15",
+            "title": "Shazam! Fury of the Gods",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 1603
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8rpDcsfLJypbO6vREc0547VKqEv.jpg",
+            "genre_ids": [
+                878,
+                12,
+                28
+            ],
+            "id": 76600,
+            "original_language": "en",
+            "original_title": "Avatar: The Way of Water",
+            "overview": "",
+            "popularity": 1636.43,
+            "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+            "release_date": "2022-12-14",
+            "title": "Avatar: The Way of Water",
+            "video": false,
+            "vote_average": 7.7,
+            "vote_count": 7998
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zPEDfWece7gg1I0904KFFVUq5mg.jpg",
+            "genre_ids": [
+                53,
+                28,
+                80
+            ],
+            "id": 1102776,
+            "original_language": "fr",
+            "original_title": "AKA",
+            "overview": "",
+            "popularity": 1399.383,
+            "poster_path": "/c0Zv7gNTH8LoRnHANhAHGWhGvJC.jpg",
+            "release_date": "2023-04-28",
+            "title": "AKA",
+            "video": false,
+            "vote_average": 7,
+            "vote_count": 257
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5i6SjyDbDWqyun8klUuCxrlFbyw.jpg",
+            "genre_ids": [
+                18,
+                28
+            ],
+            "id": 677179,
+            "original_language": "en",
+            "original_title": "Creed III",
+            "overview": "",
+            "popularity": 1242.591,
+            "poster_path": "/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+            "release_date": "2023-03-01",
+            "title": "Creed III",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 1357
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/44immBwzhDVyjn87b3x3l9mlhAD.jpg",
+            "genre_ids": [
+                27,
+                9648,
+                53
+            ],
+            "id": 934433,
+            "original_language": "en",
+            "original_title": "Scream VI",
+            "overview": "",
+            "popularity": 1196.76,
+            "poster_path": "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg",
+            "release_date": "2023-03-08",
+            "title": "Scream VI",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 1165
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/h8gHn0OzBoaefsYseUByqsmEDMY.jpg",
+            "genre_ids": [
+                28,
+                53,
+                80
+            ],
+            "id": 603692,
+            "original_language": "en",
+            "original_title": "John Wick: Chapter 4",
+            "overview": "",
+            "popularity": 1175.963,
+            "poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+            "release_date": "2023-03-22",
+            "title": "John Wick: Chapter 4",
+            "video": false,
+            "vote_average": 7.9,
+            "vote_count": 1403
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wUwFMnbFxuDfcRSGGT7QQIGDRrH.jpg",
+            "genre_ids": [
+                27
+            ],
+            "id": 785759,
+            "original_language": "en",
+            "original_title": "Two Witches",
+            "overview": "",
+            "popularity": 879.202,
+            "poster_path": "/uL9fFTdNmUUlKIJfHJclN5X3bxH.jpg",
+            "release_date": "2023-03-02",
+            "title": "Two Witches",
+            "video": false,
+            "vote_average": 6.2,
+            "vote_count": 45
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/cEyhk8tZWubni71M6plwLMQFOIX.jpg",
+            "genre_ids": [
+                28,
+                80
+            ],
+            "id": 385687,
+            "original_language": "en",
+            "original_title": "Fast X",
+            "overview": "",
+            "popularity": 1623.73,
+            "poster_path": "/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+            "release_date": "2023-05-17",
+            "title": "Fast X",
+            "video": false,
+            "vote_average": 6.2,
+            "vote_count": 29
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/aRJjCgp4uVUkXhDw8NClesQXbt3.jpg",
+            "genre_ids": [
+                53,
+                28
+            ],
+            "id": 727340,
+            "original_language": "ko",
+            "original_title": "헌트",
+            "overview": "",
+            "popularity": 937.266,
+            "poster_path": "/owt8hAoRxyK2tkLj9G0nh0r3Vpr.jpg",
+            "release_date": "2022-08-10",
+            "title": "헌트",
+            "video": false,
+            "vote_average": 6.9,
+            "vote_count": 68
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/xwA90BwZXTh8ke3CVsQlj8EOkFr.jpg",
+            "genre_ids": [
+                28,
+                12,
+                36,
+                18,
+                10752
+            ],
+            "id": 948713,
+            "original_language": "en",
+            "original_title": "The Last Kingdom: Seven Kings Must Die",
+            "overview": "",
+            "popularity": 861.928,
+            "poster_path": "/7yyFEsuaLGTPul5UkHc5BhXnQ0k.jpg",
+            "release_date": "2023-04-14",
+            "title": "The Last Kingdom: Seven Kings Must Die",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 353
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/yx96Xz7ggs7TMmDqAa8G5oJ5ami.jpg",
+            "genre_ids": [
+                37,
+                28
+            ],
+            "id": 1111140,
+            "original_language": "en",
+            "original_title": "Two Sinners and a Mule",
+            "overview": "",
+            "popularity": 808.746,
+            "poster_path": "/icL1zn5z1L5ULIpxkuOLjeUgURY.jpg",
+            "release_date": "2023-04-21",
+            "title": "Two Sinners and a Mule",
+            "video": false,
+            "vote_average": 5.8,
+            "vote_count": 13
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8HfjrSxfTVKmjNh8cJjbu5eXzcX.jpg",
+            "genre_ids": [
+                10751,
+                14,
+                28,
+                12
+            ],
+            "id": 420808,
+            "original_language": "en",
+            "original_title": "Peter Pan & Wendy",
+            "overview": "",
+            "popularity": 843.455,
+            "poster_path": "/9NXAlFEE7WDssbXSMgdacsUD58Y.jpg",
+            "release_date": "2023-04-20",
+            "title": "Peter Pan & Wendy",
+            "video": false,
+            "vote_average": 5.8,
+            "vote_count": 338
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jr8tSoJGj33XLgFBy6lmZhpGQNu.jpg",
+            "genre_ids": [
+                16,
+                10751,
+                14,
+                12,
+                35
+            ],
+            "id": 315162,
+            "original_language": "en",
+            "original_title": "Puss in Boots: The Last Wish",
+            "overview": "",
+            "popularity": 762.963,
+            "poster_path": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+            "release_date": "2022-12-07",
+            "title": "Puss in Boots: The Last Wish",
+            "video": false,
+            "vote_average": 8.3,
+            "vote_count": 5520
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/aJn9XeesqsrSLKcHfHP4u5985hn.jpg",
+            "genre_ids": [
+                878,
+                12,
+                28,
+                35
+            ],
+            "id": 283995,
+            "original_language": "en",
+            "original_title": "Guardians of the Galaxy Vol. 2",
+            "overview": "",
+            "popularity": 600.122,
+            "poster_path": "/kxtZpFfR0RMModlRHTFIuEPEH2O.jpg",
+            "release_date": "2017-04-19",
+            "title": "Guardians of the Galaxy Vol. 2",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 19686
+        }
+    ],
+    "total_pages": 38317,
+    "total_results": 766333
+}
