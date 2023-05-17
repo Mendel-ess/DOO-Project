@@ -20,7 +20,7 @@ a > span{
 }
 
 a > span:hover {
-    color: red;
+    color: rgb(24, 15, 90);
 }
 
 .header__icon {
