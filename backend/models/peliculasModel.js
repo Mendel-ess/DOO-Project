@@ -22,5 +22,9 @@ const peliculas = sequelize.define("peliculas", {
     para_adultos : {
         type: DataTypes.BOOLEAN,
         allowNull: false
+    },
+    reviews: {
+        type: DataTypes.INTEGER,
+        allowNull: true
     }
 })
