@@ -1,0 +1,21 @@
+INSERT INTO public.generos(
+	movie_genres_id, nombre)
+	VALUES (1, 'Acción'),
+  (2, 'Aventura'),
+  (3, 'Animación'),
+  (4, 'Comedia'),
+  (5, 'Crimen'),
+  (6, 'Documental'),
+  (7, 'Drama'),
+  (8, 'Familia'),
+  (9, 'Fantasía'),
+  (10, 'Historia'),
+  (11, 'Terror'),
+  (12, 'Música'),
+  (13, 'Misterio'),
+  (14, 'Romance'),
+  (15, 'Ciencia ficción'),
+  (16, 'Película de TV'),
+  (17, 'Suspense'),
+  (18, 'Bélica'),
+  (19, 'Western');

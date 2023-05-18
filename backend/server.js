@@ -4,7 +4,7 @@ const server = express();
 const port = process.env.PORT || 3003;
 
 //servidor
-server.use('/api/movies', require('./routes/movies'));
+server.use('/api/movies', require('./data/dbData'));
 server.use(express.urlencoded({extended: false}));
 server.use(express.json());
 
