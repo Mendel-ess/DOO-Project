@@ -16,11 +16,13 @@ sequelize.authenticate()
   }).catch(err => {
     console.log("No se pudo conectar la base de datos");
   });
-  
+
+server.use(express.json());
+server.use(express.urlencoded({extended: false}));
 //servidor
 server.use('/api/movies', require('./data/dbData'));
-server.use(express.urlencoded({extended: false}));
-server.use(express.json());
+
+
 
 server.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
