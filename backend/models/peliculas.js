@@ -1,7 +1,9 @@
-import sequelize from "../server";
+import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
+import { actores_peliculas} from './actores_peliculas.js'
+import { genres_map } from "./genres_map.js";
 
-const peliculas = sequelize.define("peliculas", {
+export const peliculas = sequelize.define("peliculas", {
     movie_titles_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -27,4 +29,6 @@ const peliculas = sequelize.define("peliculas", {
         type: DataTypes.INTEGER,
         allowNull: true
     }
-})
+}, {
+    timestamps:false
+});

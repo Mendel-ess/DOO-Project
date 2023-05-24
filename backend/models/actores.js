@@ -1,7 +1,7 @@
-import sequelize from  '../server';
+import { sequelize } from "../database/database.js";
 import { DataTypes } from 'sequelize';
 
-const actores = sequelize.define("actores", {
+export const actores = sequelize.define("actores", {
     actores_reparto_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

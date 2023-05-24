@@ -1,7 +1,7 @@
-import sequelize from "../server";
+import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
-const reviews = sequelize.define("reviews", {
+export const reviews = sequelize.define("reviews", {
     reviews_id: {
         type: DataTypes.INTEGER,
         primaryKey : true,

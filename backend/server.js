@@ -1,35 +1,22 @@
-const express = require('express');
-const client = require('./controller/db');
+import express from 'express';
+import { sequelize } from './database/database.js';
+import './models/users.js';
+
 const server = express();
 const port = process.env.PORT || 3003;
 
-//base dedatos
-const Sequelize = require('sequelize')
-const sequelize  = new Sequelize('postgres', 'postgres', '00000', {
-  host: 'localhost',
-  dialect: 'postgres'
-});
-
-sequelize.authenticate()
-  .then(() => {
-    console.log("Base de datos conectada");
-  }).catch(err => {
-    console.log("No se pudo conectar la base de datos");
-  });
-
 server.use(express.json());
 server.use(express.urlencoded({extended: false}));
-//servidor
-server.use('/api/movies', require('./data/dbData'));
 
+async function main() {
+  try {
+    await sequelize.sync({alter: true});
+    server.listen(port, () => {
+      console.log(`Servidor escuchando en el puerto ${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-
-server.listen(port, () => {
-  console.log(`Servidor escuchando en el puerto ${port}`);
-});
-
-module.exports = sequelize;
-
-
-
-
+main();

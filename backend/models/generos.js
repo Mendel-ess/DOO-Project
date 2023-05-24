@@ -1,14 +1,14 @@
-import sequelize from "../server";
+import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
-const sexualidad = sequelize.define("sexualidad", {
-    generos_actores_id :{
+export const generos = sequelize.define("generos", {
+    movie_genre_id : {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
     },
-    genero : {
+    nombre: {
         type: DataTypes.TEXT,
-        allowNull : false
+        allowNull: false
     }
 })

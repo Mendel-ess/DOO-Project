@@ -1,18 +1,14 @@
 import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
-export const genres_map = sequelize.define("genres_map", {
-    id : {
+export const sexualidad = sequelize.define("sexualidad", {
+    generos_actores_id :{
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
     },
-    movie_title_id : {
-        type: DataTypes.INTEGER,
+    genero : {
+        type: DataTypes.TEXT,
         allowNull : false
-    },
-    movie_genres_id : {
-        type: DataTypes.INTEGER,
-        allowNull: false
     }
 })
