@@ -1,0 +1,32 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4287f5;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

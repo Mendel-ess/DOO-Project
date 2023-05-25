@@ -7,6 +7,10 @@ import Movie from './pages/movieDetail/movie';
 import Login from './pages/login/login';
 import Register from './pages/register/register';
 import { AuthProvider } from './components/Auth/AuthContext';
+import Formulario from './pages/formPelicula/formpelicula';
+import EditarFormulario from './pages/editarFormPeli/editarForm';
+import EditarUsuario from './pages/editarUsuario/editarUsuario';
+
 
 function App() {
   return (
@@ -20,6 +24,9 @@ function App() {
               <Route path="movies/:type" element={<MovieList />}></Route>
               <Route path="login" element={<Login />}></Route>
               <Route path="register" element={<Register />}></Route>
+              <Route path='agregarpelicula' element={<Formulario />} ></Route>
+              <Route path='editarpelicula' element={<EditarFormulario />} ></Route>
+              <Route path='editarusuario' element={<EditarUsuario />} ></Route>
               <Route path="/*" element={<h1>Error Page</h1>}></Route>
             </Routes>
           </AuthProvider>

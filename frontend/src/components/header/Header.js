@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext} from "react"
 import "./Header.css"
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../Auth/AuthContext";
@@ -6,6 +6,7 @@ import { AuthContext } from "../Auth/AuthContext";
 const Header = () => {
     const { loggedIn, logout } = useContext(AuthContext);
     const navigate = useNavigate();
+
 
     const handlelogout = () => {
         logout();
@@ -19,10 +20,12 @@ const Header = () => {
             </div>
             {loggedIn ? (
                 <div className="headerRight">
-                <Link to="/dashboard"style={{textDecoration: "none"}}><span>Dashboard</span></Link>
+                <Link to="/agregarpelicula"style={{textDecoration: "none"}}><span>Agregar Pelicula</span></Link>
+                <Link to="/editarpelicula"style={{textDecoration: "none"}}><span>Modificar Pelicula</span></Link>
+                <Link to="/editarusuario"style={{textDecoration: "none"}}><span>Modificar usuario</span></Link>
                 <button onClick={handlelogout}>Cerrar sesion</button>
                 </div>
-            ) :(
+            ) : (
                 <div className="headerRight">
                 <Link to="/login" style={{textDecoration: "none"}}><span>Iniciar Sesion</span></Link>
                 <Link to="/register" style={{textDecoration: "none"}}><span>Registrarse</span></Link> 
