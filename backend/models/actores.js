@@ -19,4 +19,6 @@ export const actores = sequelize.define("actores", {
         type: DataTypes.INTEGER,
         allowNull: false
     }
+}, {
+    timestamps: false
 });

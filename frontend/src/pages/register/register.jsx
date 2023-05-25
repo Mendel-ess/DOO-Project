@@ -10,6 +10,25 @@ function Register() {
     event.preventDefault();
 
     // Aquí puedes agregar la lógica para enviar los datos del formulario al servidor
+    fetch('http://127.0.0.1:3003/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          username,
+          password,
+          email
+        })     
+      })
+      .then(response => {
+        if (response.status == 200) {
+          alert('USUARIO CREADO CON EXITO')
+        }
+      })
+        .catch(err => {
+          console.log(err);
+        });
 
     // Limpiar el formulario después del envío exitoso
     setUsername('');

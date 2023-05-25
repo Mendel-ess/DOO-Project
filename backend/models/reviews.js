@@ -1,18 +1,28 @@
 import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
+import { users_review } from "./users_review.js";
 
 export const reviews = sequelize.define("reviews", {
-    reviews_id: {
+    id: {
         type: DataTypes.INTEGER,
         primaryKey : true,
-        allowNull: false
+        autoIncrement: true
     },
     comentarios: {
-        type: DataTypes.TEXT,
-        allowNull: false
-    },
-    rating : {
-        type: DataTypes.INTEGER,
-        allowNull : false
+        type: DataTypes.TEXT
     }
+}, {
+    timestamps: false
+});
+
+reviews.hasMany(users_review, {
+    foreignKey: 'reviews_id',
+    sourceKey: 'id'
+});
+
+users_review.belongsTo(reviews, {
+    foreignKey: 'reviews_id',
+    targerKey: 'id'
 })
+
+

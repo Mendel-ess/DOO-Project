@@ -1,20 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import "./login.css"
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../components/Auth/AuthContext';
 
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
     // Validar los datos ingresados (aquí puedes agregar tu lógica de autenticación)
-    if (username === 'admin' && password === 'password') {
-      alert('Login successful!');
-    } else {
-      alert('Invalid username or password. Please try again.');
-    }
+    fetch('http://localhost:3003/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username,
+        password
+      })
+    })
+    .then(res => {
+      if( res.status == 404){
+        alert('EL USUARIO NO EXISTE');
+      }
+      if (res.status == 401){
+        alert('CONTRASEÑA INCORRECTA');
+      }
+      login();
+      navigate('/');
+    })
+    .catch(err => {
+      console.log(err);
+    })
 
     // Limpiar el formulario
     setUsername('');
@@ -45,7 +66,7 @@ function Login() {
           required
         />
         <br />
-        <button type="submit">Login</button>
+        <button type="submit" >Login</button>
       </form>
     </div>
   );

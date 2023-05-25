@@ -2,7 +2,7 @@ import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
 export const sexualidad = sequelize.define("sexualidad", {
-    generos_actores_id :{
+    id :{
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
@@ -11,4 +11,6 @@ export const sexualidad = sequelize.define("sexualidad", {
         type: DataTypes.TEXT,
         allowNull : false
     }
-})
+}, {
+    timestamps: false
+});

@@ -11,4 +11,6 @@ export const generos = sequelize.define("generos", {
         type: DataTypes.TEXT,
         allowNull: false
     }
-})
+}, {
+    timestamps: false
+});

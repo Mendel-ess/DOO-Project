@@ -15,4 +15,6 @@ export const actores_peliculas = sequelize.define("actores_peliculas", {
         type: DataTypes.INTEGER,
         allowNull: false
     }
+}, {
+    timestamps: false
 });

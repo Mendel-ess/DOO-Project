@@ -15,4 +15,6 @@ export const genres_map = sequelize.define("genres_map", {
         type: DataTypes.INTEGER,
         allowNull: false
     }
-})
+}, {
+    timestamps: false
+});
