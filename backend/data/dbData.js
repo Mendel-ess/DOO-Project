@@ -23,14 +23,6 @@ axios.get('https://api.themoviedb.org/3/movie/popular?api_key=b45c71139c410b3bdd
 });
 
 //generos
-axios.get('https://api.themoviedb.org/3/genre/movie/list?api_key=b45c71139c410b3bdd8e814b3560a0d0&language=es')
-    .then(response => {
-      genreList = Object.values(response.data);
-      genrename = genreList[0].map(i => i.name);
-    })
-    .catch(error => {
-      console.error('Error al obtener los datos:', error);
-    });
 
 //actores
 axios.get('https://api.themoviedb.org/3/movie/502356/credits?api_key=b45c71139c410b3bdd8e814b3560a0d0&language=es')

@@ -11,14 +11,15 @@ export const getPeliculas = async (req, res) => {
 
 export const crearPelicula = async (req, res) => {
     try {
-        const {titulo, puntuacion, fecha_salida, para_adultos} = req.body;
+        const {titulo, descripcion, puntuacion, fecha_salida, para_adultos} = req.body;
         const newPeli = await peliculas.create({
         titulo: titulo,
+        descripcion: descripcion,
         puntuacion: puntuacion,
         fecha_salida: fecha_salida,
         para_adultos: para_adultos
     });
-    res.json(newPeli);
+    res.sendStatus(200);
     } catch (error) {
         return res.status(500).json({message: error.message});
     }

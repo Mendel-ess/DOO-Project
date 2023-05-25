@@ -25,7 +25,6 @@ function App() {
               <Route path="login" element={<Login />}></Route>
               <Route path="register" element={<Register />}></Route>
               <Route path='agregarpelicula' element={<Formulario />} ></Route>
-              <Route path='editarpelicula' element={<EditarFormulario />} ></Route>
               <Route path='editarusuario' element={<EditarUsuario />} ></Route>
               <Route path="/*" element={<h1>Error Page</h1>}></Route>
             </Routes>

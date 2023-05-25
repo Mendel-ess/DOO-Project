@@ -21,7 +21,6 @@ const Header = () => {
             {loggedIn ? (
                 <div className="headerRight">
                 <Link to="/agregarpelicula"style={{textDecoration: "none"}}><span>Agregar Pelicula</span></Link>
-                <Link to="/editarpelicula"style={{textDecoration: "none"}}><span>Modificar Pelicula</span></Link>
                 <Link to="/editarusuario"style={{textDecoration: "none"}}><span>Modificar usuario</span></Link>
                 <button onClick={handlelogout}>Cerrar sesion</button>
                 </div>

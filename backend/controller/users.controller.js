@@ -32,7 +32,7 @@ export const updateUser = async (req, res) => {
         user.email = email;
         await user.save();
 
-        res.json(user);
+        res.sendStatus(200);
     } catch (error) {
         return res.status(500).json({message: error.message});
     }

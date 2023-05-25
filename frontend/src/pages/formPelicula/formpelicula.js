@@ -12,13 +12,27 @@ const Formulario = () => {
     e.preventDefault();
     // Aquí puedes realizar acciones adicionales con los datos del formulario
     // Por ejemplo, enviar los datos al servidor
-    console.log('Datos del formulario:', {
-      titulo,
-      descripcion,
-      puntuacion,
-      fechaSalida,
-      esParaMayores
-    });
+    fetch('http://localhost:3003/peliculas', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        titulo,
+        descripcion,
+        puntuacion,
+        fechaSalida,
+        esParaMayores
+      })
+    })
+    .then(res => {
+      if(res.status == 200){
+        alert('SE CREO LA PELICULA CON EXITO');
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    })
     // Limpia los campos del formulario después del envío
     setTitulo('');
     setDescripcion('');
