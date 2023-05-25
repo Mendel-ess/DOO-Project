@@ -2,7 +2,7 @@ import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
 export const generos = sequelize.define("generos", {
-    movie_genre_id : {
+    id : {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false

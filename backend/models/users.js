@@ -21,12 +21,3 @@ export const users = sequelize.define("users", {
 }, {
     timestamps: false
 });
-
-users.hasMany(users_review, {
-    foreignKey: 'user_id',
-    sourceKey: 'id'
-});
-users_review.belongsTo(users, {
-    foreignKey: 'user_id',
-    targetKey: 'id'
-});
