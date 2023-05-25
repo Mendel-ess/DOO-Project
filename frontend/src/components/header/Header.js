@@ -1,22 +1,37 @@
-import React from "react"
+import React, { useContext} from "react"
 import "./Header.css"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../Auth/AuthContext";
 
 const Header = () => {
+    const { loggedIn, logout } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+
+    const handlelogout = () => {
+        logout();
+        navigate('/'); 
+    };
     return (
         <div className="header">
             <div className="headerLeft">
                 <Link to="/"><img className="header__icon" src="https://lh3.googleusercontent.com/l0DQtBsN_AE73Rc1r1UX6Osdlgv7Xa6vUTHbMsW6zPpZAoGcjp0rkkQSIe8s_dVQzJHO4Lykg8anPEiPfSnK7gqR4s43guqdjqTVICs" /></Link>
-                <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
-                <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
-                
+                <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>               
             </div>
-            <div className="headerRight">
+            {loggedIn ? (
+                <div className="headerRight">
+                <Link to="/agregarpelicula"style={{textDecoration: "none"}}><span>Agregar Pelicula</span></Link>
+                <Link to="/editarusuario"style={{textDecoration: "none"}}><span>Modificar usuario</span></Link>
+                <button onClick={handlelogout}>Cerrar sesion</button>
+                </div>
+            ) : (
+                <div className="headerRight">
                 <Link to="/login" style={{textDecoration: "none"}}><span>Iniciar Sesion</span></Link>
                 <Link to="/register" style={{textDecoration: "none"}}><span>Registrarse</span></Link> 
-            </div>
+                </div>
+            )}
         </div>
-    )
-}
+    );
+};
 
 export default Header

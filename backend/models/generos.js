@@ -1,8 +1,8 @@
-import sequelize from "../server";
+import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
-const generos = sequelize.define("generos", {
-    movie_genre_id : {
+export const generos = sequelize.define("generos", {
+    id : {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
@@ -11,4 +11,6 @@ const generos = sequelize.define("generos", {
         type: DataTypes.TEXT,
         allowNull: false
     }
-})
+}, {
+    timestamps: false
+});

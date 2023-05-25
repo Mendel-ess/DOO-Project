@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import "./register.css"
+import "./user.css"
 
-function Register() {
+function EditarUsuario() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -38,7 +38,7 @@ function Register() {
 
   return (
     <div className="container" >
-      <h1>Registro</h1>
+      <h1>Editar Usuario</h1>
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="username">Nombre:</label>
         <input
@@ -76,4 +76,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default EditarUsuario;

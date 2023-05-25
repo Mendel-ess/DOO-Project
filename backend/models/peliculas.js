@@ -1,30 +1,27 @@
-import sequelize from "../server";
+import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
-const peliculas = sequelize.define("peliculas", {
-    movie_titles_id: {
+export const peliculas = sequelize.define("peliculas", {
+    id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false
+        autoIncrement: true
     },
     titulo: {
         type: DataTypes.TEXT,
-        allowNull: false
+    },
+    descripcion: {
+        type: DataTypes.TEXT
     },
     puntuacion : {
         type: DataTypes.INTEGER,
-        allowNull: false
     },
     fecha_salida: {
         type: DataTypes.DATE,
-        allowNull: false
     },
     para_adultos : {
         type: DataTypes.BOOLEAN,
-        allowNull: false
     },
-    reviews: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    }
-})
+}, {
+    timestamps:false
+});

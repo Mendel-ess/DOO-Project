@@ -1,22 +1,22 @@
-import sequelize from "../server";
+import { sequelize } from "../database/database.js";
 import { DataTypes } from "sequelize";
 
-const users = sequelize.define("users", {
-    user_id : {
+export const users = sequelize.define("users", {
+    id : {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false
+        autoIncrement: true
     },
     username: {
         type: DataTypes.TEXT,
-        allowNull: false
     },
     password: {
         type: DataTypes.TEXT,
-        allowNull: false
     },
     email: {
         type: DataTypes.TEXT,
-        allowNull : false
-    }
-})
+    },
+    
+}, {
+    timestamps: false
+});

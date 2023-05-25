@@ -13,8 +13,8 @@
 }
 
 a > span{
-    margin: 0 30px;
-    font-size: 1.3rem;
+    margin: 0 10px;
+    font-size: 1.1rem;
     cursor: pointer;
     color: white;
 }
