@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="headerLeft">
-                <Link to="/"><img className="header__icon" src="https://lh3.googleusercontent.com/l0DQtBsN_AE73Rc1r1UX6Osdlgv7Xa6vUTHbMsW6zPpZAoGcjp0rkkQSIe8s_dVQzJHO4Lykg8anPEiPfSnK7gqR4s43guqdjqTVICs" /></Link>
+                <Link to="/"><img className="header__icon" src="http://localhost:3003/assets/icon.jpg" /></Link>
                 <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>               
             </div>
             {loggedIn ? (

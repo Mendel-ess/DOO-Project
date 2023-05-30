@@ -7,13 +7,21 @@ import MovieList from "../../components/movieList/movieList";
 
 const Home = () => {
 
-    const [ popularMovies, setPopularMovies ] = useState([])
-
+    const [movieList, setMovieList] = useState([])
+    
     useEffect(() => {
-        fetch("https://api.themoviedb.org/3/movie/popular?api_key=b45c71139c410b3bdd8e814b3560a0d0&language=es")
-        .then(res => res.json())
-        .then(data => setPopularMovies(data.results))
-    }, [])
+        const getMovie = async () =>{
+            try {
+                const res = await fetch('http://127.0.0.1:3003/peliculas');
+                const data = await res.json();
+                setMovieList(data);
+            } catch (error) {
+                console.log(error)
+            }
+        };
+        getMovie();
+        console.log(MovieList)
+    }, []);
 
     return (
         <>
@@ -26,21 +34,21 @@ const Home = () => {
                     showStatus={false}
                 >
                     {
-                        popularMovies.map(movie => (
-                            <Link style={{textDecoration:"none",color:"white"}} to={`/movie/${movie.id}`} >
+                        movieList.map(movie => (
+                            <Link style={{textDecoration:"none",color:"white"}} to={`/pelicula/${movie.id}`} >
                                 <div className="posterImage">
-                                    <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
+                                    <img src={`http://localhost:3003/${movie?movie.img_back:""}`} />
                                 </div>
                                 <div className="posterImage__overlay">
-                                    <div className="posterImage__title">{movie ? movie.original_title: ""}</div>
+                                    <div className="posterImage__title">{movie ? movie.titulo: ""}</div>
                                     <div className="posterImage__runtime">
-                                        {movie ? movie.release_date : ""}
+                                        {movie ? movie.fecha_salida : ""}
                                         <span className="posterImage__rating">
-                                            {movie ? movie.vote_average :""}
+                                            {movie ? movie.puntuacion :""}
                                             <i className="fas fa-star" />{" "}
                                         </span>
                                     </div>
-                                    <div className="posterImage__description">{movie ? movie.overview : ""}</div>
+                                    <div className="posterImage__description">{movie ? movie.descripcion : ""}</div>
                                 </div>
                             </Link>
                         ))

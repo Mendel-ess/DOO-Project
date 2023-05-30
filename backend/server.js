@@ -20,7 +20,7 @@ server.use(express.urlencoded({extended: false}));
 server.use(userRoutes);
 server.use(pelisRoutes);
 server.use(generosRoutes);
-server.use(express.static('assets'));
+server.use("/assets", express.static('assets'));
 
 async function main() {
   try {
@@ -36,8 +36,8 @@ async function main() {
               "puntuacion": 8,
               "fecha_salida": "2023-03-22",
               "para_adultos": false,
-              "img_back": "assets/id1_back",
-              "img" : "assets/id1"
+              "img_back": "assets/id1_back.jpg",
+              "img" : "assets/id1.jpg"
             },
             {
               "id": 2,
@@ -46,8 +46,8 @@ async function main() {
               "puntuacion": 7.8,
               "fecha_salida": "2023-04-05",
               "para_adultos": false,
-              "img_back": "assets/id2_back",
-              "img" : "assets/id2"
+              "img_back": "assets/id2_back.jpg",
+              "img" : "assets/id2.jpg"
             },
             {
               "id": 3,
@@ -56,8 +56,8 @@ async function main() {
               "puntuacion": 7.1,
               "fecha_salida": "2023-05-17",
               "para_adultos": false,
-              "img_back": "assets/id3_back",
-              "img" : "assets/id3"
+              "img_back": "assets/id3_back.jpg",
+              "img" : "assets/id3.jpg"
             },
             {
               "id": 4,
@@ -66,8 +66,8 @@ async function main() {
               "puntuacion": 7.1,
               "fecha_salida": "2023-04-12",
               "para_adultos": false,
-              "img_back": "assets/id4_back",
-              "img" : "assets/id4"
+              "img_back": "assets/id4_back.jpg",
+              "img" : "assets/id4.jpg"
             },
             {
               "id": 5,
@@ -76,8 +76,8 @@ async function main() {
               "puntuacion": 6.1,
               "fecha_salida": "2023-05-18",
               "para_adultos": false,
-              "img_back": "assets/id5_back",
-              "img" : "assets/id5"
+              "img_back": "assets/id5_back.jpg",
+              "img" : "assets/id5.jpg"
             },
             {
               "id": 6,
@@ -86,8 +86,8 @@ async function main() {
               "puntuacion": 7.5,
               "fecha_salida": "2023-01-27",
               "para_adultos": false,
-              "img_back": "assets/id6_back",
-              "img" : "assets/id6"
+              "img_back": "assets/id6_back.jpg",
+              "img" : "assets/id6.jpg"
             },
             {
               "id": 7,
@@ -96,8 +96,8 @@ async function main() {
               "puntuacion": 6.5,
               "fecha_salida": "2023-02-15",
               "para_adultos": false,
-              "img_back": "assets/id7_back",
-              "img" : "assets/id7"
+              "img_back": "assets/id7_back.jpg",
+              "img" : "assets/id7.jpg"
             },
             {
               "id": 8,
@@ -106,8 +106,8 @@ async function main() {
               "puntuacion": 8.1,
               "fecha_salida": "2023-05-03",
               "para_adultos": false,
-              "img_back": "assets/id8_back",
-              "img" : "assets/id8"
+              "img_back": "assets/id8_back.jpg",
+              "img" : "assets/id8.jpg"
             },
             {
               "id": 9,
@@ -116,8 +116,8 @@ async function main() {
               "puntuacion": 7.3,
               "fecha_salida": "2023-04-05",
               "para_adultos": false,
-              "img_back": "assets/id9_back",
-              "img" : "assets/id9"
+              "img_back": "assets/id9_back.jpg",
+              "img" : "assets/id9.jpg"
             },
             {
               "id": 10,
@@ -126,8 +126,8 @@ async function main() {
               "puntuacion": 7.7,
               "fecha_salida": "2022-12-14",
               "para_adultos": false,
-              "img_back": "assets/id10_back",
-              "img" : "assets/id10"
+              "img_back": "assets/id10_back.jpg",
+              "img" : "assets/id10.jpg"
             }    
         ])
       }

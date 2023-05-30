@@ -2,22 +2,24 @@ import React, { useState } from 'react';
 import './formulario.css'; // Importa el archivo de estilos CSS
 
 const Formulario = () => {
+  const [id, setId] = useState('')
   const [titulo, setTitulo] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [puntuacion, setPuntuacion] = useState('');
   const [fechaSalida, setFechaSalida] = useState('');
   const [esParaMayores, setEsParaMayores] = useState(false);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes realizar acciones adicionales con los datos del formulario
-    // Por ejemplo, enviar los datos al servidor
+    const idNumero = parseInt(id, 10);
     fetch('http://localhost:3003/peliculas', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        id: idNumero,
         titulo,
         descripcion,
         puntuacion,
@@ -34,6 +36,7 @@ const Formulario = () => {
       console.log(err);
     })
     // Limpia los campos del formulario después del envío
+    setId('')
     setTitulo('');
     setDescripcion('');
     setPuntuacion('');
@@ -44,6 +47,13 @@ const Formulario = () => {
   return (
     <form className="formulario" onSubmit={handleSubmit}>
         <h2>Agregar nueva pelicula</h2>
+        <label htmlFor="id">id:</label>
+      <input
+        type="text"
+        id="id"
+        value={id}
+        onChange={(e) => setId(e.target.value)}
+      />
       <label htmlFor="titulo">Título:</label>
       <input
         type="text"
@@ -67,9 +77,9 @@ const Formulario = () => {
         onChange={(e) => setPuntuacion(e.target.value)}
       />
 
-      <label htmlFor="fechaSalida">Fecha de salida:</label>
+      <label htmlFor="fechaSalida">Fecha de salida (Formato fecha: AAAA-MM-DD):</label>
       <input
-        type="date"
+        type="text"
         id="fechaSalida"
         value={fechaSalida}
         onChange={(e) => setFechaSalida(e.target.value)}

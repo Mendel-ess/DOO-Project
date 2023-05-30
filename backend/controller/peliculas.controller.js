@@ -11,15 +11,20 @@ export const getPeliculas = async (req, res) => {
 
 export const crearPelicula = async (req, res) => {
     try {
-        const {titulo, descripcion, puntuacion, fecha_salida, para_adultos, img_back, img} = req.body;
+        const {id, titulo, descripcion, puntuacion, fecha_salida, para_adultos, img_back, img} = req.body;
+        const back = img_back || 'assets/default_back.png';
+        const def = img || 'assets/default.jpg';
+        const pa = para_adultos || false;
+
         const newPeli = await peliculas.create({
+        id: id,
         titulo: titulo,
         descripcion: descripcion,
         puntuacion: puntuacion,
         fecha_salida: fecha_salida,
-        para_adultos: para_adultos,
-        img_back: img_back,
-        img : img
+        para_adultos: pa,
+        img_back: back,
+        img : def
     });
     res.sendStatus(200);
     } catch (error) {

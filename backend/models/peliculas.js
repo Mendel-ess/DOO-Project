@@ -5,7 +5,7 @@ export const peliculas = sequelize.define("peliculas", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
     },
     titulo: {
         type: DataTypes.TEXT,
@@ -17,7 +17,7 @@ export const peliculas = sequelize.define("peliculas", {
         type: DataTypes.INTEGER,
     },
     fecha_salida: {
-        type: DataTypes.DATE,
+        type: DataTypes.TEXT,
     },
     para_adultos : {
         type: DataTypes.BOOLEAN,

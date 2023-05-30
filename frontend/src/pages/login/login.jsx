@@ -30,8 +30,11 @@ function Login() {
       if (res.status == 401){
         alert('CONTRASEÑA INCORRECTA');
       }
-      login();
-      navigate('/');
+      if(res.status == 200){
+        login();
+        navigate('/');
+      }
+      
     })
     .catch(err => {
       console.log(err);
