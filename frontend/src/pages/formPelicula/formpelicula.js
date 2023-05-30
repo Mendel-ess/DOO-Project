@@ -6,13 +6,16 @@ const Formulario = () => {
   const [titulo, setTitulo] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [puntuacion, setPuntuacion] = useState('');
-  const [fechaSalida, setFechaSalida] = useState('');
-  const [esParaMayores, setEsParaMayores] = useState(false);
+  const [fecha_salida, setFechaSalida] = useState('');
+  const [para_adultos, setEsParaMayores] = useState(false);
+  const [img, setImg] = useState(null);
+  const [img_back, setImgBack] = useState(null);
   
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const idNumero = parseInt(id, 10);
+
     fetch('http://localhost:3003/peliculas', {
       method: 'POST',
       headers: {
@@ -23,8 +26,10 @@ const Formulario = () => {
         titulo,
         descripcion,
         puntuacion,
-        fechaSalida,
-        esParaMayores
+        fecha_salida,
+        para_adultos,
+        img,
+        img_back
       })
     })
     .then(res => {
@@ -79,9 +84,9 @@ const Formulario = () => {
 
       <label htmlFor="fechaSalida">Fecha de salida (Formato fecha: AAAA-MM-DD):</label>
       <input
-        type="text"
+        type="date"
         id="fechaSalida"
-        value={fechaSalida}
+        value={fecha_salida}
         onChange={(e) => setFechaSalida(e.target.value)}
       />
 
@@ -89,8 +94,22 @@ const Formulario = () => {
       <input
         type="checkbox"
         id="esParaMayores"
-        checked={esParaMayores}
+        checked={para_adultos}
         onChange={(e) => setEsParaMayores(e.target.checked)}
+      />
+      <label htmlFor="img">Añade la imagen del poster</label>
+      <input
+        type="file"
+        id="img"
+        accept='image/*'
+        onChange={(e) => setImg(e.target.files[0])}
+      />
+      <label htmlFor="img_back">Añade la imagen del back</label>
+      <input
+        type="file"
+        id="img_back"
+        accept='image/*'
+        onChange={(e) => setImgBack(e.target.files[0])}
       />
 
       <button type="submit">Enviar</button>

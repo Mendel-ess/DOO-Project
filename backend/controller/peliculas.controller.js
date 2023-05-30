@@ -11,9 +11,10 @@ export const getPeliculas = async (req, res) => {
 
 export const crearPelicula = async (req, res) => {
     try {
+        console.log(req.body)
         const {id, titulo, descripcion, puntuacion, fecha_salida, para_adultos, img_back, img} = req.body;
-        const back = img_back || 'assets/default_back.png';
-        const def = img || 'assets/default.jpg';
+        const back = req.files['img_back'][0].filename || 'assets/default_back.png';
+        const def = req.files['img'][0].filename || 'assets/default.jpg';
         const pa = para_adultos || false;
 
         const newPeli = await peliculas.create({
