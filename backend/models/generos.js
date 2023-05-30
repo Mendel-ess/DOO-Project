@@ -5,11 +5,10 @@ export const generos = sequelize.define("generos", {
     id : {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        allowNull: false
+        autoIncrement: true
     },
     nombre: {
         type: DataTypes.TEXT,
-        allowNull: false
     }
 }, {
     timestamps: false

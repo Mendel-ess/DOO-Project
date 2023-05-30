@@ -22,6 +22,12 @@ export const peliculas = sequelize.define("peliculas", {
     para_adultos : {
         type: DataTypes.BOOLEAN,
     },
+    img_back: {
+        type: DataTypes.TEXT
+    },
+    img : {
+        type: DataTypes.TEXT
+    }
 }, {
     timestamps:false
 });

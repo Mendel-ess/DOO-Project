@@ -11,13 +11,15 @@ export const getPeliculas = async (req, res) => {
 
 export const crearPelicula = async (req, res) => {
     try {
-        const {titulo, descripcion, puntuacion, fecha_salida, para_adultos} = req.body;
-        const newPeli = await peliculas.create({
+        const {titulo, descripcion, puntuacion, fecha_salida, para_adultos, img_back, img} = req.body;
+        const newPeli = await peliculas.bulkCreate({
         titulo: titulo,
         descripcion: descripcion,
         puntuacion: puntuacion,
         fecha_salida: fecha_salida,
-        para_adultos: para_adultos
+        para_adultos: para_adultos,
+        img_back: img_back,
+        img : img
     });
     res.sendStatus(200);
     } catch (error) {
