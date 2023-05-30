@@ -9,8 +9,9 @@ const MovieList = () => {
     useEffect(() => {
         const getMovie = async () =>{
             try {
-                const res = await fetch('http://127.0.0.1:3003/peliculas');
+                const res = await fetch('http://localhost:3003/peliculas');
                 const data = await res.json();
+                console.log(data)
                 setMovieList(data);
             } catch (error) {
                 console.log(error)
