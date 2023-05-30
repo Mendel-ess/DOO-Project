@@ -1,4 +1,4 @@
-import { peliculas } from "../models/peliculas.js"
+import { peliculas } from "../models/peliculas.js";
 
 export const getPeliculas = async (req, res) => {
     try {
