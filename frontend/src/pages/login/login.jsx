@@ -34,6 +34,9 @@ function Login() {
         login();
         navigate('/');
       }
+      if(res.status === 500) {
+        alert('ERROR, REVISE LA CONSOLA');
+      }
       
     })
     .catch(err => {

@@ -10,8 +10,8 @@ function EditarUsuario() {
     event.preventDefault();
 
     // Aquí puedes agregar la lógica para enviar los datos del formulario al servidor
-    fetch('http://127.0.0.1:3003/users', {
-      method: 'POST',
+    fetch('http://127.0.0.1:3003/users/modify', {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -23,7 +23,13 @@ function EditarUsuario() {
       })
       .then(response => {
         if (response.status == 200) {
-          alert('USUARIO CREADO CON EXITO')
+          alert('USUARIO ACTUALIZADO CON EXITO')
+        }
+        if(response.status === 409){
+          alert('EL USUARIO NO EXISTE');
+        }
+        if(response.status === 500){
+          alert('ERROR, REVISE LA CONSOLA')
         }
       })
         .catch(err => {

@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({storage});
-route.get('/peliculas', getPeliculas);
+route.get('/peliculas/:id', getPeliculas);
 route.post('/peliculas', upload.fields([{name: 'img', maxCount: 1},{name: 'img_back', maxCount: 1}]),crearPelicula);
 route.delete('/peliculas/:id', borrarPelicula);
 

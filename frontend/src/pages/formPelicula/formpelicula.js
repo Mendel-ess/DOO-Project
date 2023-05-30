@@ -36,6 +36,9 @@ const Formulario = () => {
       if(res.status == 200){
         alert('SE CREO LA PELICULA CON EXITO');
       }
+      if(res.status === 500){
+        alert('ERROR, REVISE CONSOLA');
+      }
     })
     .catch(err => {
       console.log(err);

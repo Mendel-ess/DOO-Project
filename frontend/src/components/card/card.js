@@ -23,7 +23,7 @@ const Cards = ({movie}, img) => {
             </SkeletonTheme>
         </div>
         :
-        <Link to={`/movie/${movie.id}`} style={{textDecoration:"none", color:"white"}}>
+        <Link to={`/peliculas/${movie.id}`} style={{textDecoration:"none", color:"white"}}>
             <div className="cards">
                 <img className="cards__img" src={`http://localhost:3003/${movie?movie.img:""}`} />
                 <div className="cards__overlay">

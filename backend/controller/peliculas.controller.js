@@ -2,8 +2,9 @@ import { peliculas } from "../models/peliculas.js";
 
 export const getPeliculas = async (req, res) => {
     try {
-        const allMovies = await peliculas.findAll();
-        res.json(allMovies);
+        const {id } = req.params;
+        const peli = peliculas.findByPk(id);
+        res.status(200).json(peli);
     } catch (error) {
         return res.status(500).json({message: error.message});
     }
