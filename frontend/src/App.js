@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from './components/header/Header';
 import Home from './pages/home/home';
 import MovieList from './components/movieList/movieList';
-import Movie from './pages/movieDetail/movie';
+import Movie from './pages/movieDetail/movie.js';
 import Login from './pages/login/login';
 import Register from './pages/register/register';
 import { AuthProvider } from './components/Auth/AuthContext';
@@ -20,7 +20,7 @@ function App() {
             <Header />
             <Routes>
               <Route index element={<Home />}></Route>
-              <Route path="movie/:id" element={<Movie />}></Route>
+              <Route path="pelis/:id" element={<Movie />}></Route>
               <Route path="movies/:type" element={<MovieList />}></Route>
               <Route path="login" element={<Login />}></Route>
               <Route path="register" element={<Register />}></Route>

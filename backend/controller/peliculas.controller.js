@@ -3,16 +3,16 @@ import { peliculas } from "../models/peliculas.js";
 export const getPeliculas = async (req, res) => {
     try {
         const {id } = req.params;
-        const peli = await peliculas.findByPk(id);
-        res.status(200).json(peli);
+        const peli = await peliculas.findOne({where: {id}});
+        res.json(peli);
     } catch (error) {
         return res.status(500).json({message: error.message});
     }
 }
 export const getAllPelis = async (req, res) => {
     try {
-        const peli = await peliculas.findAll();
-        res.json(peli);
+        const pelis = await peliculas.findAll();
+        res.json(pelis);
     } catch (error) {
         return res.status(500).json({message: error.message})
     }
